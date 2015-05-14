@@ -1,0 +1,24 @@
+{
+  "namespace": "com.sanss.hadoop.demos.avro.proto",
+  "protocol": "HelloWorld",
+  "doc": "Protocol Greetings not support chinese",
+  "types": [{
+  				"name": "Greeting", 
+     			"type": "record", 
+     			"fields": [{"name": "message", "type": "string" }]
+     		},
+    		{
+    			"name": "Curse", 
+    			"type": "error", 
+    			"fields": [{"name": "message", "type": "string" }]
+    		}],
+
+  "messages": {
+    "hello": {
+			"doc": "Say hello.", 
+			"request": [{"name": "greeting", "type": "Greeting" }], 
+			"response": "Greeting", 
+			"errors": ["Curse"]
+			}
+  }
+}
